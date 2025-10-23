@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-librescore"
+version = "1.0.0"
+description = "Download sheet music from MuseScore"
+authors = [
+    {name = "kikkopy"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["musescore", "music", "sheet-music", "download", "pdf", "midi", "mp3"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "reportlab>=4.0.0",
+    "Pillow>=10.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/kikkopy/py-librescore"
+"Repository" = "https://github.com/kikkopy/py-librescore"
+"Bug Reports" = "https://github.com/kikkopy/py-librescore/issues"
+
+[project.scripts]
+py-librescore = "py_librescore.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["py_librescore*"]
